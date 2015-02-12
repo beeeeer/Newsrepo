@@ -4,11 +4,11 @@
  * @version: 1.0
  * @license http://www.gnu.org/copyleft/lesser.html
  */
- 
+
 include 'controller/controller.php';
- 
+
 class ArticlesController extends Controller{
- 
+
     public function index() {
         $view=$this->loadView('articles');
         $view->index();
@@ -32,5 +32,4 @@ class ArticlesController extends Controller{
         $this->redirect('?task=articles&action=index');
     }
 }
-
 ?>

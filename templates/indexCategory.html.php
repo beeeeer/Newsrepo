@@ -1,17 +1,17 @@
-<? include 'templates/header.html.php'; ?></pre>
+<? include 'templates/header.html.php'; ?>
+
 <h1>Lista kategorii</h1>
-<? foreach($this->get('catsData') as $cats) { ?> <? } ?>
 <table>
-<tbody>
-<tr>
-<td>Nazwa</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td><a href="?task=categories&action=delete&id=<?= $cats['id']; ?>">usuń</a></td>
-</tr>
-</tbody>
+    <tr>
+        <td>Nazwa</td>
+        <td>&nbsp;</td>
+    </tr>
+    <? foreach($this->get('catsData') as $cats) { ?>
+    <tr>
+        <td><?= $cats['name']; ?></td>
+        <td><a href="?task=categories&amp;action=delete&amp;id=<?= $cats['id']; ?>">usuń</a></td>
+    </tr>
+    <? } ?>
 </table>
-<pre>
+
 <? include 'templates/footer.html.php'; ?>

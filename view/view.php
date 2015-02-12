@@ -1,17 +1,22 @@
 <?php
+/**
+ * @author Łukasz Socha <kontakt@lukasz-socha.pl>
+ * @version: 1.0
+ * @license http://www.gnu.org/copyleft/lesser.html
+ */
 
 /**
- * ta klasa implementuje metody do widoku.
+ * This class includes methods for views.
  *
  * @abstract
  */
 abstract class View{
- 
+
     /**
-     * ładuje obiekt z modelu
+     * It loads the object with the model.
      *
-     * @param string $name nazwa klasy z klasą
-     * @param string $path scieżka do pliku z klasą
+     * @param string $name name class with the class
+     * @param string $path pathway to the file with the class
      *
      * @return object
      */
@@ -36,10 +41,10 @@ abstract class View{
         return $ob;
     }
     /**
-     * ładuje plik z templatką.
+     * It includes template file.
      *
-     * @param string $name nazwa pliku template
-     * @param string $path sciezka 
+     * @param string $name name template file
+     * @param string $path pathway
      *
      * @return void
      */
@@ -61,7 +66,7 @@ abstract class View{
         }
     }
     /**
-     * Ustawia dane
+     * It sets data.
      *
      * @param string $name
      * @param mixed $value
@@ -72,7 +77,7 @@ abstract class View{
         $this->$name=$value;
     }
     /**
-     * Pobiera dane
+     * It gets data.
      *
      * @param string $name
      *
@@ -82,4 +87,3 @@ abstract class View{
         return $this->$name;
     }
 }
-?>

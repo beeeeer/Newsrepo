@@ -4,9 +4,9 @@
  * @version: 1.0
  * @license http://www.gnu.org/copyleft/lesser.html
  */
- 
+
 include 'view/view.php';
- 
+
 class ArticlesView extends View{
     public function  index() {
         $art=$this->loadModel('articles');
@@ -24,5 +24,4 @@ class ArticlesView extends View{
         $this->render('addArticle');
     }
 }
-
 ?>

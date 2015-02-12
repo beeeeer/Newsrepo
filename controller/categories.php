@@ -4,9 +4,9 @@
  * @version: 1.0
  * @license http://www.gnu.org/copyleft/lesser.html
  */
- 
-include 'controller/controller.php';
- 
+
+include_once 'controller/controller.php';
+
 class CategoriesController extends Controller{
     public function index() {
         $view=$this->loadView('categories');
@@ -27,6 +27,4 @@ class CategoriesController extends Controller{
         $this->redirect('?task=categories&action=index');
     }
 }
-
-
 ?>

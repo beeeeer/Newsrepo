@@ -1,9 +1,14 @@
 <?php
+/**
+ * @author Łukasz Socha <kontakt@lukasz-socha.pl>
+ * @version: 1.0
+ * @license http://www.gnu.org/copyleft/lesser.html
+ */
 
 include 'model/model.php';
- 
+
 class CategoriesModel extends Model{
- 
+
     public function insert($data) {
         $ins=$this->pdo->prepare('INSERT INTO categories (name) VALUES (:name)');
         $ins->bindValue(':name', $data['name'], PDO::PARAM_STR);
@@ -18,3 +23,4 @@ class CategoriesModel extends Model{
         $del->execute();
     }
 }
+?>

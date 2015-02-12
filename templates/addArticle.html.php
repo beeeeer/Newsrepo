@@ -1,5 +1,5 @@
 <? include 'templates/header.html.php'; ?>
- 
+
 <h1>Dodaj artykuł</h1>
 <form action="?task=articles&amp;action=insert" method="post">
     Tytuł: <input type="text" name="title" /><br />
@@ -14,5 +14,5 @@
     </select><br />
     <input type="submit" value="Dodaj" />
 </form>
- 
+
 <? include 'templates/footer.html.php'; ?>

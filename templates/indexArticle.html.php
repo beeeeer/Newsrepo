@@ -1,5 +1,5 @@
 <? include 'templates/header.html.php'; ?>
- 
+
 <h1>Lista artykułów</h1>
 <table>
     <tr>
@@ -19,5 +19,5 @@
     </tr>
     <? } ?>
 </table>
- 
+
 <? include 'templates/footer.html.php'; ?>

@@ -1,10 +1,14 @@
 <?php
+/**
+ * @author Łukasz Socha <kontakt@lukasz-socha.pl>
+ * @version: 1.0
+ * @license http://www.gnu.org/copyleft/lesser.html
+ */
 
- 
 include 'model/model.php';
- 
+
 class ArticlesModel extends Model{
- 
+
     public function getAll() {
         $query="SELECT a.id, a.title, a.date_add, a.autor, c.name FROM articles AS a LEFT JOIN categories AS c ON a.id_categories=c.id";
         $select=$this->pdo->query($query);
@@ -12,7 +16,7 @@ class ArticlesModel extends Model{
             $data[]=$row;
         }
         $select->closeCursor();
- 
+
         return $data;
     }
     public function getOne($id) {
@@ -22,7 +26,7 @@ class ArticlesModel extends Model{
             $data[]=$row;
         }
         $select->closeCursor();
- 
+
         return $data;
     }
     public function insert($data) {
@@ -41,3 +45,4 @@ class ArticlesModel extends Model{
         $del->execute();
     }
 }
+?>
