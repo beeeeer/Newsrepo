@@ -1,20 +1,14 @@
 <?php
 /**
- * @author Łukasz Socha <kontakt@lukasz-socha.pl>
- * @version: 1.0
- * @license http://www.gnu.org/copyleft/lesser.html
- */
- 
-/**
- * This class includes methods for models.
+ * Ta klasa implementuje metody dla modeli
  *
  * @abstract
  */
 abstract class Model{
     /**
-     * object of the class PDO
+     * obiekt z klasy PDO
      *
-     * @var object
+     * @deklaracja obiektu
      */
     protected $pdo;
  
@@ -34,12 +28,12 @@ abstract class Model{
         }
     }
     /**
-     * It loads the object with the model.
+     * ładuje obiekt z modelem.
      *
-     * @param string $name name class with the class
-     * @param string $path pathway to the file with the class
+     * @param tekst $name nazwa klasy z klasą
+     * @param tekst $path link do pliku z klasą
      *
-     * @return object
+     * @return obiekt
      */
     public function loadModel($name, $path='model/') {
         $path=$path.$name.'.php';
@@ -62,12 +56,12 @@ abstract class Model{
         return $ob;
     }
     /**
-     * It selects data from the database.
+     * Wybiera rekordy z bazy
      *
-     * @param string $from Table
-     * @param <type> $select Records to select (default * (all))
-     * @param <type> $where Condition to query
-     * @param <type> $order Order ($record ASC/DESC)
+     * @param tekst $from tabeli
+     * @param <type> $select Rekordy do wybrania (default * (all))
+     * @param <type> $where warunek do zapytania
+     * @param <type> $order sortowanie ($record ASC/DESC)
      * @param <type> $limit LIMIT
      * @return array
      */
